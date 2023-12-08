@@ -190,16 +190,16 @@ html {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
     .filtro1 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .text-reveal1 span {
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .texto {
-        font-size: 1rem;
-        margin-top: 0.5%; /* Ajusta según sea necesario */
+        font-size: 0.8rem;
+        margin-top: 0.2%; /* Ajusta según sea necesario */
     }
 
     .navbar .logo .torta{
