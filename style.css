@@ -94,7 +94,7 @@ html {
     --1-stroke-color: rgb(117, 0, 128);
     --1-stroke-size: 1px;
 
-    --2-fill-color: rgb(87, 14, 95);
+    --2-fill-color: rgb(130, 39, 173);
     --2-stroke-color: white;
     --2-stroke-size: 2px;
 
@@ -653,7 +653,7 @@ h4 {
     .info-comida,
     .no-bebida,
     .otro-menu {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
