@@ -91,10 +91,10 @@ html {
     --animation-delay: 1s;
 
     --1-fill-color: transparent;
-    --1-stroke-color: rgb(160, 30, 196);
+    --1-stroke-color: rgb(132, 30, 196);
     --1-stroke-size: 1px;
 
-    --2-fill-color: rgb(109, 14, 135);
+    --2-fill-color: rgb(91, 14, 135);
     --2-stroke-color: white;
     --2-stroke-size: 2px;
 
@@ -620,7 +620,7 @@ h4 {
 }
 
 .menu {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     font-weight: 600;
     margin: 0;
     color: #651696;
@@ -628,7 +628,7 @@ h4 {
 }
 
 .info-comida {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     color: #000000;
     margin-top: 4%;
 }
@@ -641,7 +641,7 @@ h4 {
 }
 
 .otro-menu {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     color: #000000;
     margin-top: 8%;
 }
