@@ -653,7 +653,7 @@ h4 {
     .info-comida,
     .no-bebida,
     .otro-menu {
-        font-size: 1rem;
+        font-size: 1.4rem;
         /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
@@ -677,7 +677,7 @@ h4 {
 #scroll-wrapper {
     position: relative;
     width: 100%;
-    height: 80vmin;
+    height: 100vmin;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 8%;
@@ -713,7 +713,7 @@ h4 {
 /* Estilos específicos para pantallas pequeñas */
 @media (max-width: 768px) {
     .tarjeta {
-        padding: 10px;
+        padding: 24px;
         /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
