@@ -715,8 +715,8 @@ h4 {
     content: "";
     position: absolute;
     background-color: var(--color-primary);
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     z-index: 999;
     left: 50%;
