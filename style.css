@@ -200,7 +200,7 @@ html {
 
     .text-reveal1 span {
         font-size: 4rem;
-        text-align: center;
+        width: 50vh;
     }
 }
 
@@ -223,15 +223,15 @@ html {
 }
 
 .a {
-    background-color: #4bd144;
+    background-color: rgb(0, 206, 0);
 }
 
 .b {
-    background-color: #f5e504;
+    background-color: yellow;
 }
 
 .c {
-    background-color: #FF6201;
+    background-color: orange;
 }
 
 .d {
