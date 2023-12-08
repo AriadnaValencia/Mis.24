@@ -59,12 +59,9 @@ html {
 .texto {
     font-family: 'Handlee', cursive;
     color: rgba(255, 255, 255, 0.721);
-    font-size: 2.4rem;
-    text-align: center;
-    margin-top: 4%;
-    position: relative; /* O ajusta según sea necesario */
-    z-index: 1; /* Asegura que el texto esté por encima del fondo */
-    display: inline-block; /* O ajusta según sea necesario */
+    font-size: 1.4rem;
+    text-align: right;
+    margin-top: 5%;
 }
 
 .navbar .logo .torta {
