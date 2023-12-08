@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    background-color: black;
+}
+
+/*EFECTO DE ESTRELLAS*/
+.shooting-star {
+    clip-path: polygon(50% 0%,
+            61% 35%,
+            98% 35%,
+            68% 57%,
+            79% 91%,
+            50% 70%,
+            21% 91%,
+            32% 57%,
+            2% 35%,
+            39% 35%);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(218, 162, 247);
+    transform-origin: center center;
+    animation: shooting-star-animation linear infinite;
+    filter: blur(1rem);
+    max-width: 100%;
+}
+
+@keyframes shooting-star-animation {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.1;
+    }
+
+    30%,
+    90% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1.0;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0.0;
+    }
+}
+
+/*NAV*/
+.container-fluid {
+    height: 5rem;
+    align-items: center;
+}
+
+.navbar {
+    background-color: black;
+}
+
+.texto {
+    font-family: 'Handlee', cursive;
+    color: rgba(255, 255, 255, 0.721);
+    font-size: 2.4rem;
+    text-align: center;
+    margin-top: 5%;
+}
+
+.navbar .logo .torta {
+    width: 4rem;
+    margin-top: 4%;
+}
+
+/* Estilos para pantallas grandes */
+.filtro1 {
+    height: auto;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    font-size: 2rem;
+    color: white;
+}
+
+.text-reveal1 {
+    --animation-duration: 2s;
+    --animation-delay: 1s;
+
+    --1-fill-color: transparent;
+    --1-stroke-color: rgb(190, 71, 222);
+    --1-stroke-size: 1px;
+
+    --2-fill-color: rgb(194, 54, 232);
+    --2-stroke-color: white;
+    --2-stroke-size: 2px;
+
+    --lines-color: white;
+    --lines-size: 4px;
+
+    --text-padding: 0.5rem 1rem;
+
+    display: grid;
+
+    &::after,
+    &>span {
+        grid-area: 1/1;
+        animation: var(--animation-name) var(--animation-duration) ease-in-out var(--animation-delay) forwards;
+    }
+
+    >span {
+        padding: var(--text-padding);
+        color: var(--color);
+        opacity: 0;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        -webkit-mask-image: var(--mask-image);
+        -webkit-mask-composite: var(--mask-composite-webkit);
+
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-image: var(--mask-image);
+        mask-composite: var(--mask-composite);
+
+        &:nth-child(1) {
+            -webkit-text-stroke: var(--1-stroke-size) var(--1-stroke-color);
+            --color: var(--1-fill-color);
+            --mask-image: linear-gradient(black 0 0), linear-gradient(black 0 0);
+            --mask-composite-webkit: destination-out;
+            --mask-composite: exclude;
+            --animation-name: text-reveal-1;
+
+        }
+
+        &:nth-child(2) {
+            -webkit-text-stroke: var(--2-stroke-size) var(--2-stroke-color);
+            --color: var(--2-fill-color);
+            --mask-image: linear-gradient(black 0 0);
+            --animation-name: text-reveal-2;
+        }
+
+    }
+
+    &::after {
+        content: "";
+        z-index: 2;
+        border: var(--lines-size) solid var(--lines-color);
+        border-block: none;
+        width: 100%;
+        justify-self: center;
+        opacity: 0;
+        --animation-name: text-reveal-lines;
+    }
+}
+
+@keyframes text-reveal-1 {
+    0%,
+    100% {
+        -webkit-mask-size: 100% 100%, 100%;
+        mask-size: 100% 100%, 100%;
+        opacity: 1;
+    }
+
+    50% {
+        -webkit-mask-size: 0% 100%, 100%;
+        mask-size: 100% 100%, 100%;
+    }
+}
+
+@keyframes text-reveal-2 {
+    0%,
+    50% {
+        -webkit-mask-size: 0% 100%;
+        mask-size: 0% 100%;
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-mask-size: 100% 100%;
+        mask-size: 100% 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes text-reveal-lines {
+    5%,
+    95% {
+        opacity: 1;
+    }
+
+    50% {
+        width: 0;
+    }
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .filtro1 {
+        font-size: 1.4rem;
+    }
+
+    .text-reveal1 span {
+        font-size: 11rem;
+        text-align: center;
+    }
+}
+
+/*TARJETAS DEL INDEX*/
+.menu,
+.ubi,
+.dresscode,
+.dinero {
+    width: 10%;
+    margin-top: 2rem;
+}
+
+.caja {
+    text-align: center;
+    padding: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+
+.a {
+    background-color: #4bd144;
+}
+
+.b {
+    background-color: #d1c844;
+}
+
+.c {
+    background-color: #FF6201;
+}
+
+.d {
+    background-color: rgb(255, 0, 0);
+}
+
+h3,
+h4 {
+    font-family: 'Comfortaa', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*dl {
+    font-family: "Poppins", sans-serif;
+}
+
+dt {
+    font-family: 'Asap Condensed', sans-serif;
+}
+
+.precio,
+.tarjeta {
+    font-family: 'Asap Condensed', sans-serif;
+    font-size: 1.6rem;
+}*/
+
+
+/*FOOTER*/
+.autor {
+    height: auto;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a62ce3;
+    font-family: 'Handlee', cursive;
+    font-size: 1.6rem;
+}
+
+/*SCROLL*/
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 6%;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 10px #a5aaad;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(212, 0, 255);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(212, 0, 255);
+}
+
+/*PAG DRESSCODE*/
+#dresscode {
+    background-color: #000000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+}
+
+.key {
+    font-size: 14rem;
+    display: inline-block;
+    letter-spacing: -1vw;
+    transition: transform 0.2s;
+}
+
+@keyframes pressDown1 {
+
+    30%,
+    40%,
+    100% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pressDown2 {
+
+    70%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pressDown3 {
+
+    30%,
+    40%,
+    100% {
+        transform: translateY(0);
+    }
+
+    35% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pressDown4 {
+
+    40%,
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+
+    45% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pressDown5 {
+
+    20%,
+    30%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pressDown6 {
+
+    60%,
+    70%,
+    100% {
+        transform: translateY(0);
+    }
+
+    65% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pressDown7 {
+
+    10%,
+    20%,
+    100% {
+        transform: translateY(0);
+    }
+
+    15% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes pressDown8 {
+
+    35%,
+    45%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(10px);
+    }
+}
+
+.key:nth-child(1) {
+    animation: pressDown1 2s infinite;
+}
+
+.key:nth-child(2) {
+    animation: pressDown2 3s infinite;
+}
+
+.key:nth-child(3) {
+    animation: pressDown3 4s infinite;
+}
+
+.key:nth-child(4) {
+    animation: pressDown4 2.5s infinite;
+}
+
+.key:nth-child(5) {
+    animation: pressDown5 2.5s infinite;
+}
+
+.key:nth-child(6) {
+    animation: pressDown6 3.5s infinite;
+}
+
+.key:nth-child(7) {
+    animation: pressDown7 2.2s infinite;
+}
+
+.key:nth-child(8) {
+    animation: pressDown8 3.2s infinite;
+}
+
+.totalblack {
+    font-family: system-ui, sans-serif;
+    font-size: 8rem;
+    text-align: center;
+    background-color: #000000;
+    color: #fff;
+}
+
+.vestimenta {
+    background-color: #000000;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    #dresscode {
+        padding: 10px; /* Ajusta el relleno según sea necesario */
+        text-align: center;
+    }
+
+    .key {
+        font-size: 6rem; /* Ajusta el tamaño de fuente según sea necesario */
+    }
+}
+
+/*PAG UBICACION*/
+.card {
+    --border-radius: 2rem;
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1;
+    position: relative;
+    z-index: unset;
+    background-color: black;
+    border-radius: var(--border-radius);
+    backdrop-filter: blur(1rem);
+
+    &:after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: var(--border-radius);
+        z-index: -1;
+        background-image: linear-gradient(122.12deg, #651696 0%, #961664 100%);
+        --b: 0.5;
+        filter: brightness(var(--b));
+        transition: all calc(1s / 16 * 4) ease-in-out;
+
+        --border: 4;
+        --alpha: 0;
+        --gradient: linear-gradient(122.12deg, #651696 0%, #961664 100%);
+        --bg-size: calc(100% + (2px * var(--border)));
+        background: var(--gradient) center center / var(--bg-size) var(--bg-size);
+        border: calc(var(--border) * 1px) solid transparent;
+        mask: linear-gradient(hsl(0 0% 100% / var(--alpha)),
+                hsl(0 0% 100% / var(--alpha))),
+            linear-gradient(hsl(0 0% 100%), hsl(0 0% 100%));
+        mask-clip: padding-box, border-box;
+        mask-composite: intersect;
+    }
+
+    &:hover {
+        &:after {
+            --b: 1;
+            isolation: isolate;
+        }
+    }
+}
+
+.ubicacion {
+    min-height: 100%;
+    display: grid;
+    place-items: center;
+    color: white;
+    gap: 1rem;
+    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+    background-color: #000000;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* Cambiado a ancho completo para pantallas pequeñas */
+    }
+
+    .ubicacion {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Columnas de ancho completo para pantallas pequeñas */
+    }
+}
+
+/* Estilos específicos para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .card {
+        width: 70%; /* Ajustar según sea necesario para pantallas medianas */
+    }
+}
+
+/* Estilos específicos para pantallas grandes */
+@media (min-width: 1025px) {
+    .card {
+        width: 60%; /* Ajustar según sea necesario para pantallas grandes */
+    }
+}
+
+/* Estilos comunes para .dire y .hora */
+.dire,
+.hora {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top: 25%;
+}
+
+/* Estilos específicos para .reloj */
+.reloj {
+    width: 76%;
+    height: 65%;
+}
+
+/* Estilos específicos para pantallas pequeñas para .dire, .hora, y .reloj */
+@media (max-width: 768px) {
+    .dire,
+    .hora,
+    .reloj {
+        width: 100%; /* Ajustar a ancho completo para pantallas pequeñas */
+        margin-top: 10%; /* Ajustar según sea necesario para pantallas pequeñas */
+    }
+}
+
+.dire {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.hora {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.reloj {
+    width: 75%;
+    height: 60%;
+}
+
+
+/*PAG DEL MENU*/
+/* Estilos generales para .menu, .info-comida, .no-bebida, y .otro-menu */
+.menu,
+.info-comida,
+.no-bebida,
+.otro-menu {
+    font-family: 'Playpen Sans', cursive;
+    text-align: center;
+}
+
+.menu {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin: 0;
+    color: #651696;
+    margin-top: 2%;
+}
+
+.info-comida {
+    font-size: 2rem;
+    color: #000000;
+    margin-top: 4%;
+}
+
+.no-bebida {
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 25%;
+}
+
+.otro-menu {
+    font-size: 2.4rem;
+    color: #000000;
+    margin-top: 8%;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu,
+    .info-comida,
+    .no-bebida,
+    .otro-menu {
+        font-size: 2rem; /* Ajustar según sea necesario para pantallas pequeñas */
+    }
+}
+
+:root {
+    --color-primary: #dc13ff;
+    --color-border: #fd95ff;
+    --color-secondary: #ffe8ec;
+    --color-text: #000000;
+}
+
+/* Estilos generales para .comida y #scroll-wrapper */
+.comida {
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+#scroll-wrapper {
+    position: relative;
+    width: 100%; /* Ancho completo para adaptarse a pantallas pequeñas */
+    height: 60vmin;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 8%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 24px;
+    background-color: rgb(212, 175, 235);
+    border-radius: 8px;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 0 0 1px var(--color-border);
+    margin-top: 8%;
+}
+
+/* Estilos generales para .tarjeta */
+.tarjeta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 48px;
+    padding-top: 24px;
+    padding-bottom: 72px;
+    background-color: #ab7ece;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px #dddddd;
+    scroll-snap-align: center;
+    min-width: 80vmin;
+    min-height: 50vmin;
+    font-family: "Inter", sans-serif;
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tarjeta {
+        padding: 24px; /* Ajustar según sea necesario para pantallas pequeñas */
+    }
+}
+
+.tarjeta::after {
+    --move-x: -108px;
+    content: "";
+    position: absolute;
+    background-color: var(--color-primary);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    z-index: 999;
+    left: 50%;
+    top: 50%;
+    transform: translateY(calc(18vmin + 32px)) translateX(var(--move-x)) scale(0.6);
+    mix-blend-mode: color-burn;
+}
+
+.indicator {
+    position: relative;
+    background-color: var(--color-secondary);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px var(--color-border);
+}
+
+/*PAG RESERVA*/
+.pag-reserva {
+    width: 100%;
+    height: auto; /* Cambiado de 100% a auto para adaptarse al contenido */
+    background-color: #000000;
+}
+
+.reserva {
+    align-items: center;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.info-reserva {
+    width: 80%; /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
+    max-width: 400px; /* Establece un ancho máximo para evitar que la información se extienda demasiado en pantallas grandes */
+    margin: 0 auto; /* Centra el bloque en la pantalla */
+    border-radius: 2%;
+    border: #541076 solid;
+    text-align: center;
+}
+
+.valor {
+    font-family: 'Playpen Sans', cursive;
+    font-size: 4.4rem;
+    text-align: center;
+    margin-top: 15%;
+}
+
+.precio {
+    font-family: 'Handlee', cursive;
+    font-size: 3.8rem;
+    text-align: center;
+    margin-top: 0.1%;
+}
+
+.alias {
+    font-family: 'Handlee', cursive;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.confirmacion {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 2.6rem;
+    text-align: center;
+    margin-top: 30%;
+}
+
+/* BOTON PARA RESERVAR */
+.boton-reserva a {
+    font-family: 'Playpen Sans', cursive;
+    background-color: #651696;
+    border: 2px solid #000000; /* Corregido error en la propiedad border */
+    color: #d898fa;
+    font-size: 1.8em;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 5px 10px; /* Ajustado el relleno */
+    text-transform: uppercase;
+}
+
+.boton-reserva {
+    margin-top: 10%;
+}
+
+button .boton-reserva a {
+    position: relative;
+    z-index: 3;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-reserva {
+        width: 90%; /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
+    }
+
+    .valor,
+    .precio,
+    .alias,
+    .confirmacion,
+    .boton-reserva a {
+        font-size: 2.4rem; /* Ajusta el tamaño de fuente según sea necesario para pantallas más pequeñas */
+    }
+}
+@media(max-width: 900px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
