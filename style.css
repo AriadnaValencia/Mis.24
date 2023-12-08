@@ -91,10 +91,10 @@ html {
     --animation-delay: 1s;
 
     --1-fill-color: transparent;
-    --1-stroke-color: rgb(66, 27, 98);
+    --1-stroke-color: #651696;;
     --1-stroke-size: 1px;
 
-    --2-fill-color: rgb(90, 0, 128);
+    --2-fill-color: #651696;;
     --2-stroke-color: white;
     --2-stroke-size: 2px;
 
@@ -273,7 +273,7 @@ h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #a62ce3;
+    color: #50166c;
     font-family: 'Handlee', cursive;
     font-size: 1.6rem;
 }
