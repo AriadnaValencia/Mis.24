@@ -91,10 +91,10 @@ html {
     --animation-delay: 1s;
 
     --1-fill-color: transparent;
-    --1-stroke-color: rgb(70, 0, 128);
+    --1-stroke-color: rgb(117, 73, 153);
     --1-stroke-size: 1px;
 
-    --2-fill-color: rgb(99, 39, 173);
+    --2-fill-color: #dc13ff;
     --2-stroke-color: white;
     --2-stroke-size: 2px;
 
@@ -498,14 +498,14 @@ h4 {
         inset: 0;
         border-radius: var(--border-radius);
         z-index: -1;
-        background-image: linear-gradient(122.12deg, #651696 20%, #961664 100%);
+        background-image: linear-gradient(122.12deg, #651696 50%, #961664 100%);
         --b: 0.5;
         filter: brightness(var(--b));
         transition: all calc(1s / 16 * 4) ease-in-out;
 
         --border: 4;
         --alpha: 0;
-        --gradient: linear-gradient(122.12deg, #651696 20%, #961664 100%);
+        --gradient: linear-gradient(122.12deg, #651696 50%, #961664 100%);
         --bg-size: calc(100% + (2px * var(--border)));
         background: var(--gradient) center center / var(--bg-size) var(--bg-size);
         border: calc(var(--border) * 1px) solid transparent;
@@ -653,7 +653,7 @@ h4 {
     .info-comida,
     .no-bebida,
     .otro-menu {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
