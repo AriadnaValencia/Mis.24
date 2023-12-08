@@ -716,7 +716,7 @@ h4 {
     position: absolute;
     background-color: var(--color-primary);
     width: 20px;
-    height: 20px;
+    height: 30px;
     border-radius: 50%;
     z-index: 999;
     left: 50%;
