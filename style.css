@@ -24,17 +24,21 @@ html {
     @media (max-width: 768px) {
         width: 20px;
         height: 20px;
-        animation-duration: 6s; /* Adjust the animation duration for smaller screens */
+        animation-duration: 6s;
+        /* Adjust the animation duration for smaller screens */
     }
 }
 
 @keyframes shooting-star-animation {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0) rotate(0deg);
         opacity: 0.1;
     }
 
-    30%, 90% {
+    30%,
+    90% {
         transform: translateY(100vh) rotate(360deg);
         opacity: 1.0;
     }
@@ -66,6 +70,11 @@ html {
 .navbar .logo .torta {
     width: 4rem;
     margin-top: 4%;
+}
+
+.navbar .flecha .flecha-atras {
+    width: 1rem;
+    margin-top: 1%;
 }
 
 /* Estilos para pantallas grandes */
@@ -148,6 +157,7 @@ html {
 }
 
 @keyframes text-reveal-1 {
+
     0%,
     100% {
         -webkit-mask-size: 100% 100%, 100%;
@@ -162,6 +172,7 @@ html {
 }
 
 @keyframes text-reveal-2 {
+
     0%,
     50% {
         -webkit-mask-size: 0% 100%;
@@ -177,6 +188,7 @@ html {
 }
 
 @keyframes text-reveal-lines {
+
     5%,
     95% {
         opacity: 1;
@@ -199,10 +211,11 @@ html {
 
     .texto {
         font-size: 0.8rem;
-        margin-top: 0.2%; /* Ajusta según sea necesario */
+        margin-top: 0.2%;
+        /* Ajusta según sea necesario */
     }
 
-    .navbar .logo .torta{
+    .navbar .logo .torta {
         width: 2rem;
         margin-top: 1%;
     }
@@ -251,21 +264,6 @@ h4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
-
-/*dl {
-    font-family: "Poppins", sans-serif;
-}
-
-dt {
-    font-family: 'Asap Condensed', sans-serif;
-}
-
-.precio,
-.tarjeta {
-    font-family: 'Asap Condensed', sans-serif;
-    font-size: 1.6rem;
-}*/
-
 
 /*FOOTER*/
 .autor {
@@ -471,12 +469,14 @@ dt {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     #dresscode {
-        padding: 10px; /* Ajusta el relleno según sea necesario */
+        padding: 5px;
+        /* Ajusta el relleno según sea necesario */
         text-align: center;
     }
 
     .key {
-        font-size: 6rem; /* Ajusta el tamaño de fuente según sea necesario */
+        font-size: 4rem;
+        /* Ajusta el tamaño de fuente según sea necesario */
     }
 }
 
@@ -538,25 +538,29 @@ dt {
 /* Estilos específicos para pantallas pequeñas */
 @media (max-width: 768px) {
     .card {
-        width: 100%; /* Cambiado a ancho completo para pantallas pequeñas */
+        width: 80%;
+        /* Cambiado a ancho completo para pantallas pequeñas */
     }
 
     .ubicacion {
-        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Columnas de ancho completo para pantallas pequeñas */
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+        /* Columnas de ancho completo para pantallas pequeñas */
     }
 }
 
 /* Estilos específicos para pantallas medianas */
 @media (min-width: 769px) and (max-width: 1024px) {
     .card {
-        width: 70%; /* Ajustar según sea necesario para pantallas medianas */
+        width: 70%;
+        /* Ajustar según sea necesario para pantallas medianas */
     }
 }
 
 /* Estilos específicos para pantallas grandes */
 @media (min-width: 1025px) {
     .card {
-        width: 60%; /* Ajustar según sea necesario para pantallas grandes */
+        width: 60%;
+        /* Ajustar según sea necesario para pantallas grandes */
     }
 }
 
@@ -576,11 +580,14 @@ dt {
 
 /* Estilos específicos para pantallas pequeñas para .dire, .hora, y .reloj */
 @media (max-width: 768px) {
+
     .dire,
     .hora,
     .reloj {
-        width: 100%; /* Ajustar a ancho completo para pantallas pequeñas */
-        margin-top: 10%; /* Ajustar según sea necesario para pantallas pequeñas */
+        width: 100%;
+        /* Ajustar a ancho completo para pantallas pequeñas */
+        margin-top: 10%;
+        /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
 
@@ -641,11 +648,13 @@ dt {
 
 /* Estilos específicos para pantallas pequeñas */
 @media (max-width: 768px) {
+
     .menu,
     .info-comida,
     .no-bebida,
     .otro-menu {
-        font-size: 2rem; /* Ajustar según sea necesario para pantallas pequeñas */
+        font-size: 1rem;
+        /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
 
@@ -667,7 +676,8 @@ dt {
 
 #scroll-wrapper {
     position: relative;
-    width: 100%; /* Ancho completo para adaptarse a pantallas pequeñas */
+    width: 100%;
+    /* Ancho completo para adaptarse a pantallas pequeñas */
     height: 60vmin;
     overflow-y: auto;
     overflow-x: hidden;
@@ -704,7 +714,8 @@ dt {
 /* Estilos específicos para pantallas pequeñas */
 @media (max-width: 768px) {
     .tarjeta {
-        padding: 24px; /* Ajustar según sea necesario para pantallas pequeñas */
+        padding: 10px;
+        /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
 
@@ -735,7 +746,8 @@ dt {
 /*PAG RESERVA*/
 .pag-reserva {
     width: 100%;
-    height: auto; /* Cambiado de 100% a auto para adaptarse al contenido */
+    height: auto;
+    /* Cambiado de 100% a auto para adaptarse al contenido */
     background-color: #000000;
 }
 
@@ -747,9 +759,12 @@ dt {
 }
 
 .info-reserva {
-    width: 80%; /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
-    max-width: 400px; /* Establece un ancho máximo para evitar que la información se extienda demasiado en pantallas grandes */
-    margin: 0 auto; /* Centra el bloque en la pantalla */
+    width: 80%;
+    /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
+    max-width: 400px;
+    /* Establece un ancho máximo para evitar que la información se extienda demasiado en pantallas grandes */
+    margin: 0 auto;
+    /* Centra el bloque en la pantalla */
     border-radius: 2%;
     border: #541076 solid;
     text-align: center;
@@ -787,12 +802,14 @@ dt {
 .boton-reserva a {
     font-family: 'Playpen Sans', cursive;
     background-color: #651696;
-    border: 2px solid #000000; /* Corregido error en la propiedad border */
+    border: 2px solid #000000;
+    /* Corregido error en la propiedad border */
     color: #d898fa;
     font-size: 1.8em;
     font-weight: 600;
     letter-spacing: 1px;
-    padding: 5px 10px; /* Ajustado el relleno */
+    padding: 5px 10px;
+    /* Ajustado el relleno */
     text-transform: uppercase;
 }
 
@@ -808,7 +825,8 @@ button .boton-reserva a {
 /* Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
     .info-reserva {
-        width: 90%; /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
+        width: 90%;
+        /* Ajusta el ancho según sea necesario para pantallas más pequeñas */
     }
 
     .valor,
@@ -816,9 +834,11 @@ button .boton-reserva a {
     .alias,
     .confirmacion,
     .boton-reserva a {
-        font-size: 2.4rem; /* Ajusta el tamaño de fuente según sea necesario para pantallas más pequeñas */
+        font-size: 2.4rem;
+        /* Ajusta el tamaño de fuente según sea necesario para pantallas más pequeñas */
     }
 }
+
 @media(max-width: 900px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
