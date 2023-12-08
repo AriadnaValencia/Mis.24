@@ -653,7 +653,7 @@ h4 {
     .info-comida,
     .no-bebida,
     .otro-menu {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
@@ -710,14 +710,6 @@ h4 {
     font-family: "Inter", sans-serif;
 }
 
-/* Estilos específicos para pantallas pequeñas */
-@media (max-width: 768px) {
-    .tarjeta {
-        padding: 24px;
-        /* Ajustar según sea necesario para pantallas pequeñas */
-    }
-}
-
 .tarjeta::after {
     --move-x: -108px;
     content: "";
@@ -740,6 +732,14 @@ h4 {
     height: 14px;
     border-radius: 50%;
     box-shadow: 0 0 0 1px var(--color-border);
+}
+
+/* Estilos específicos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tarjeta {
+        padding: 24px;
+        /* Ajustar según sea necesario para pantallas pequeñas */
+    }
 }
 
 /*PAG RESERVA*/
