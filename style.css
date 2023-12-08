@@ -73,7 +73,7 @@ html {
 }
 
 .navbar .flecha .flecha-atras {
-    width: 1rem;
+    width: 2rem;
     margin-top: 1%;
 }
 
@@ -628,7 +628,7 @@ h4 {
 }
 
 .info-comida {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #000000;
     margin-top: 4%;
 }
@@ -677,8 +677,7 @@ h4 {
 #scroll-wrapper {
     position: relative;
     width: 100%;
-    /* Ancho completo para adaptarse a pantallas pequeñas */
-    height: 60vmin;
+    height: 80vmin;
     overflow-y: auto;
     overflow-x: hidden;
     padding: 8%;
