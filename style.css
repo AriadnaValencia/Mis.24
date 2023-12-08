@@ -91,10 +91,10 @@ html {
     --animation-delay: 1s;
 
     --1-fill-color: transparent;
-    --1-stroke-color: rgb(190, 71, 222);
+    --1-stroke-color: rgb(160, 30, 196);
     --1-stroke-size: 1px;
 
-    --2-fill-color: rgb(194, 54, 232);
+    --2-fill-color: rgb(109, 14, 135);
     --2-stroke-color: white;
     --2-stroke-size: 2px;
 
@@ -653,7 +653,7 @@ h4 {
     .info-comida,
     .no-bebida,
     .otro-menu {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         /* Ajustar según sea necesario para pantallas pequeñas */
     }
 }
