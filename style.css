@@ -191,11 +191,11 @@ html {
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
     .filtro1 {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
     }
 
     .text-reveal1 span {
-        font-size: 4rem;
+        font-size: 10rem;
     }
 }
 
@@ -222,11 +222,11 @@ html {
 }
 
 .b {
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
 }
 
 .c {
-    background-color: orange;
+    background-color: rgb(255, 208, 0);
 }
 
 .d {
